@@ -1,0 +1,187 @@
+/*parks.css
+  author: jimaan singh bajwa
+  id: 105217602
+  date: june 11, 2025
+  description: stylesheet for windsor parks showcase website with city of windsor branding.
+  features responsive layout, sticky footer, and accessible design patterns.
+  */
+
+/*---google font import---*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/*---base styles---*/
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    margin: 0;
+    /*reset default margin*/
+    /*semi-transparent white overlay over background image for readability*/
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+        url('windsor_pic_1.jpg');
+    background-size: cover; /*full viewport coverage*/
+    background-attachment: fixed; /*fixed scrolling effect*/
+    background-position: center;
+    color: #212529; /*flex layout enables sticky footer*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*minimum viewport height*/
+}
+
+/*---header section---*/
+header {
+    /*blue gradient overlay (30% opaque to semi-transparent) over header image*/
+    background-image:
+        linear-gradient(to right, #005596 30%, rgba(0, 85, 150, 0.5) 100%),
+        url('ambassador_pic.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 5rem 6%; /*responsive padding units*/
+    text-align: left;
+    border-bottom: 5px solid #003a66; /*brand accent color*/
+}
+
+/*main heading in header*/
+header h1 {
+    margin: 0; /*reset default margin*/
+    font-size: 3.5rem;
+    font-weight: 700; /*text shadow for better contrast on background*/
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    max-width: 50%; /*prevent overly long headings*/
+}
+
+/*---main navigation---*/
+nav {
+    background-color: #e9ecef; /*light gray background*/
+    border-bottom: 1px solid #dee2e6; /*subtle separation*/
+    padding: 1rem;
+    text-align: center;
+}
+
+/*navigation links*/
+nav a {
+    text-decoration: none;
+    color: #005596; /*brand blue*/
+    margin: 0 15px; /*horizontal spacing*/
+    font-weight: 700; /*smooth transition for hover effects*/
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #003a66; /*darker blue on hover*/
+    text-decoration: underline; /*visual feedback*/
+}
+
+/*---main content area---*/
+main {
+    padding: 20px;
+    max-width: 1000px; /*optimal reading width*/
+    margin: 20px auto; /*centered layout*/
+    flex-grow: 1; /*expands to push footer down*/
+    width: 90%; /*responsive width*/
+}
+
+/*content sections*/
+section {
+    background-color: white;
+    margin-bottom: 25px; /*vertical spacing*/
+    padding: 25px 30px;
+    border-radius: 5px; /*softened corners*/
+    /*subtle shadow for depth*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dee2e6; /*light border*/
+}
+
+/*section headings*/
+h2 {
+    color: #005596; /*brand blue*/
+    font-size: 2rem;
+    border-bottom: 2px solid #e9ecef; /*visual separation*/
+    padding-bottom: 10px;
+    margin-top: 0; /*reset default margin*/
+}
+
+/*---table of contents---*/
+#toc ul {
+    list-style: none; /*remove bullets*/
+    padding: 0; /*reset default padding*/
+}
+
+#toc li {
+    margin: 15px 0; /*vertical spacing*/
+}
+
+#toc a {
+    text-decoration: none;
+    color: #343a40; /*dark gray*/
+    font-size: 1.3rem;
+    font-weight: 700;
+    transition: color 0.3s ease; /*smooth color transition*/
+}
+
+#toc a:hover {
+    color: #005596; /*brand blue on hover*/
+}
+
+/*---image styles---*/
+.park-image {
+    display: block; /*proper margin handling*/
+    max-width: 100%; /*prevent overflow*/
+    height: auto; /*maintain aspect ratio*/
+    border-radius: 5px; /*match section styling*/
+    margin: 10px auto 20px auto; /*vertical spacing*/
+    /*subtle shadow for depth*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*image attribution text*/
+.photo-credit {
+    font-size: 0.8rem; /*smaller text*/
+    color: #6c757d; /*subtle gray*/
+    text-align: left;
+    font-style: italic; /*standard attribution style*/
+    margin-top: -10px; /*tighten to image*/
+    margin-bottom: 20px; /*bottom spacing*/
+}
+
+/*---section navigation---*/
+.park-nav {
+    text-align: center;
+    margin-top: 30px; /*separation from content*/
+    border-top: 1px solid #e9ecef; /*visual divider*/
+    padding-top: 20px; /*spacing above links*/
+}
+
+.park-nav a {
+    color: #005596; /*brand blue*/
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px; /*horizontal spacing*/
+}
+
+.park-nav a:hover {
+    text-decoration: underline; /*hover feedback*/
+}
+
+/*---footer---*/
+footer {
+    background-color: #333333; /*dark background*/
+    color: #f8f9fa; /*light text*/
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: auto; /*sticky footer positioning*/
+}
+
+/*footer text elements*/
+footer p {
+    margin: 8px 0; /*vertical spacing*/
+}
+
+footer a {
+    color: #ffffff; /*white links*/
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /*hover feedback*/
+}
